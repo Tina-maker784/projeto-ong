@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Cães & Gatos</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ONG Cães & Gatos</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#adocao">Adoção</a></li>
+                    <li><a href="#doacoes">Doações</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Ajude-nos a salvar vidas!</h2>
+            <p>Adote um amigo de quatro patas ou faça uma doação para mudar a vida desses animais.</p>
+            <a href="#adocao" class="btn">Conheça nossos animais</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="container">
+        <h2>Sobre Nós</h2>
+        <p>A ONG Cães & Gatos é dedicada ao resgate, cuidado e adoção de cães e gatos abandonados. Com o apoio de voluntários e doações, garantimos uma vida digna para esses animais até que encontrem um novo lar.</p>
+    </section>
+
+    <section id="adocao" class="container">
+        <h2>Adote um Amigo</h2>
+        <div class="grid">
+            <div class="animal">
+                <img src="../static/golden-retriever-1.png" alt="Cachorro disponível para adoção">
+                <h3>Rex</h3>
+                <p>Cachorro de 2 anos, dócil e brincalhão.</p>
+            </div>
+            <div class="animal">
+                <img src="{{ url_for('static', filename='gato 01.jpg') }}" alt="Gato disponível para adoção">
+                <h3>Mia</h3>
+                <p>Gata de 1 ano, carinhosa e calma.</p>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Para adoção preencha o formulário abaixo:</h2>
+            <!-- O formulário para enviar dados deve apontar para '/' com POST -->
+            <form class="form-adocao" method="POST" action="/">
+                <div>
+                    <label for="item">Nome:</label>
+                    <input type="text" id="item" name="nome" required>
+                </div>
+                <div>
+                    <label for="item">Telefone:</label>
+                    <input type="text" id="item" name="telefone" required>
+                </div>
+                <div>
+                    <label for="item">E-mail:</label>
+                    <input type="text" id="item" name="email" required>
+                </div>
+                <div>
+                    <label for="item">Nome do pet:</label>
+                    <input type="text" id="item" name="nomepet" required>
+                </div>
+                <div>
+                <br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div> 
+        <a href="#contato" class="btn">Entre em contato para adotar</a>
+    </section>
+
+    <section id="doacoes" class="container">
+        <h2>Faça uma Doação</h2>
+        <p>Ajude a nossa ONG a continuar resgatando e cuidando de cães e gatos. Toda doação é bem-vinda e faz uma grande diferença!</p>
+        <a href="#contato" class="btn">Saiba como doar</a>
+    </section>
+
+    <section id="contato" class="container">
+        <h2>Contato</h2>
+        <p>Email: contato@caesegatos.org</p>
+        <p>Telefone: (11) 98765-4321</p>
+        <p>Endereço: Rua das Patinhas, 123 - São Paulo, SP</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ONG Cães & Gatos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

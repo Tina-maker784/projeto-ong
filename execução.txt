@@ -1,0 +1,3 @@
+#comando para enviar app para ec2
+scp-i 
+ssh -i "vm-v2-luno-user10.pem" ubuntu@ec2-44-223-17-211.compute-1.amazonaws.com
