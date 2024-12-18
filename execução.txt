@@ -1,3 +1,6 @@
 #comando para enviar app para ec2
 scp-i 
-ssh -i "vm-v2-luno-user10.pem" ubuntu@ec2-44-223-17-211.compute-1.amazonaws.com
+
+
+scp -i "C:\projetos\ong\aluno_user2.pem" -r "app"  ubuntu@ec2-54-82-97-1.compute-1.amazonaws.com:~
+ssh -i "aluno_user2.pem" ubuntu@ec2-54-82-97-1.compute-1.amazonaws.com
